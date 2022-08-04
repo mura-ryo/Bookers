@@ -1,15 +1,8 @@
 <% if flash[:notice] %>
- <div class="alert alert-success" role="alert">
- <p class="notice text-center" style="color:green;"><%= flash[:notice] %></p></div>
+  <p><%= flash[:notice] %></p>
 <% end %>
 
-<h2>タイトル</h2>
-<p><%= @book.title %></p>
+<p>Title:<%= @book.title %></p>
+<p>Body:<%= @book.body %></p>
 
-<h2>本文</h2>
-<p><%= @book.body %></p>
-
-<%= link_to "Edit", edit_book_path(@book.id) %>
-  
-<%= link_to "Back", books_path %>
-
+<%= link_to "Edit", edit_book_path(@book) %>|<%= link_to "Back", books_path %>
