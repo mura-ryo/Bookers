@@ -25,6 +25,7 @@
 <h2>&nbsp;New book</h2>
 
 <% if flash.now[:error] %>
+　<%= @book.errors.count %> errors prohibited this book from being saved:
   <p><%= flash.now[:error] %></p>
 <% end %>
 <%= form_for(@book) do |f| %>
